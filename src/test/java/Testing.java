@@ -96,7 +96,24 @@ public class Testing {
     }
 
     @Test
-    void fieldCheck(){
-        
+    void fieldCheck() {
+        // going to just check the status as 400 or 200. Could also return a count of
+        // fields but the documentation also supports the 10 limit
+        String overURL = "https://restcountries.com/v3.1/all?fields=languages,name,capital,currencies,borders,area,coatOfArms,continents,independent,fifa,flag";
+        String underURL = "https://restcountries.com/v3.1/all?fields=languages,name,capital,currencies,borders,area,coatOfArms,continents,independent,fifa";
+
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest overRequest = HttpRequest.newBuilder().uri(URI.create(overURL)).GET().build();
+        HttpRequest underRequest = HttpRequest.newBuilder().uri(URI.create(underURL)).GET().build();
+        HttpResponse<String> overResponse = null; // had to set initially null here because the assert
+        HttpResponse<String> underResponse = null; // wasn't able to reach the variable in the try catch
+        try {
+            overResponse = client.send(overRequest, BodyHandlers.ofString()); // store the response for 11 fields
+            underResponse = client.send(underRequest, BodyHandlers.ofString()); // store the response for 10 fields
+        } catch (IOException | InterruptedException e) {
+            
+        }
+        assertEquals( 200, underResponse.statusCode()); // test for passing at 10
+        assertEquals( 400, overResponse.statusCode()); // test for giving 400 code once 11 fields are entered
     }
 }
