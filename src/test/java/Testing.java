@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,6 +18,7 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Map;
 
 //documentation to reference: 
 // https://openjdk.org/groups/net/httpclient/intro.html - basic java http setup, similar to C# 
@@ -36,12 +38,19 @@ public class Testing {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
         try {
-            HttpResponse<String> response = client.send(request, BodyHandlers.ofString()); //store the response 
-            String body = response.body(); //take the raw JSON into a string
+            HttpResponse<String> response = client.send(request, BodyHandlers.ofString()); // store the response
+            String body = response.body(); // take the raw JSON into a string
 
-            JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray(); //parse into array
+            JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray(); // parse into array
             for (JsonElement element : jsonArray) {
-                String commonName = element.getAsJsonObject().getAsJsonObject("name").get("official").getAsString(); //take the official name and add to hashset
+                String commonName = element.getAsJsonObject().getAsJsonObject("name").get("official").getAsString(); // take
+                                                                                                                     // the
+                                                                                                                     // official
+                                                                                                                     // name
+                                                                                                                     // and
+                                                                                                                     // add
+                                                                                                                     // to
+                                                                                                                     // hashset
                 countries.add(commonName);
             }
         } catch (IOException | InterruptedException e) {
@@ -50,5 +59,44 @@ public class Testing {
 
         assertEquals(250, countries.size()); // I am assuming max countries of 250 and all "statuses" count in my
                                              // assumptions
+    }
+
+    @Test
+    void saslOfficial() {
+        // very similar approach as #1 the main difference is the languages are stored
+        // as a key value pair so accessing it was slightly easier
+        Set<String> languages = new HashSet<>(); // storing each languages
+        String url = "https://restcountries.com/v3.1/name/South%20Africa?fields=languages"; // just need SA languages
+                                                                                            // for this test
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
+
+        try {
+            HttpResponse<String> response = client.send(request, BodyHandlers.ofString()); // store the response
+            String body = response.body(); // take the raw JSON into a string
+
+            JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray();
+            // uses 0 to get the only element and then access languages
+            JsonObject languagesObject = jsonArray.get(0).getAsJsonObject().get("languages").getAsJsonObject();
+
+            for (Map.Entry<String, JsonElement> entry : languagesObject.entrySet()) {
+                languages.add(entry.getKey()); // add each language to the set. I am assuming it is SASL for testing
+                                               // but if this can vary could do getValue and as String to eliminate that
+                                               // risk
+            }
+        } catch (IOException | InterruptedException e) {
+
+        }
+        if (languages.contains("SASL")) {
+            System.out.println("South African Sign Language is an official language");
+        } else {
+            System.out.println("South African Sign Language is not an official language at this moment");
+        }
+        assertTrue(languages.contains("SASL"), "SASL Found"); // this should fail
+    }
+
+    @Test
+    void fieldCheck(){
+        
     }
 }
