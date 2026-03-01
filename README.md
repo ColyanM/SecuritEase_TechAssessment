@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SecuritEase Technical Assessment
 
 ## Overview
@@ -91,4 +90,3 @@ Tests
   nine - Boundary test for 9 AM exactly
   five - Boundary test for 5 PM exactly 
   ownCountry - Home country appears in results within business hours
->>>>>>> 067cef1b9fd0546c56620cd399678b2981643137
