@@ -87,7 +87,7 @@ public class Testing {
         } catch (IOException | InterruptedException e) {
 
         }
-        if (languages.contains("SASL")) {
+        if (languages.contains("sasl")) { //changes to lower case to match API 
             System.out.println("South African Sign Language is an official language");
         } else {
             System.out.println("South African Sign Language is not an official language at this moment");
@@ -111,7 +111,7 @@ public class Testing {
             overResponse = client.send(overRequest, BodyHandlers.ofString()); // store the response for 11 fields
             underResponse = client.send(underRequest, BodyHandlers.ofString()); // store the response for 10 fields
         } catch (IOException | InterruptedException e) {
-            
+
         }
         assertEquals( 200, underResponse.statusCode()); // test for passing at 10
         assertEquals( 400, overResponse.statusCode()); // test for giving 400 code once 11 fields are entered

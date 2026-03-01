@@ -20,6 +20,7 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         loader();
+        findCentre("Republic of Ghana", 600);
     }
 
     public static void loader() {
@@ -70,7 +71,7 @@ public class App {
                         int timeZoneMinutes = Integer.parseInt(splitter[1]);
                         int totalMinutes = 0;
                         if (timeZoneHours < 0) {
-                            totalMinutes = (timeZoneHours * 60) - timeZoneMinutes; //-UTC handling
+                            totalMinutes = (timeZoneHours * 60) - timeZoneMinutes; // -UTC handling
                         } else {
                             totalMinutes = (timeZoneHours * 60) + timeZoneMinutes;
                         }
@@ -87,14 +88,54 @@ public class App {
 
     }
 
-    public static void findCenter(Country homeCountry, int currentTime) { // will assume normal business hours are 8 AM
-                                                                          // to 5 PM
+    public static void findCentre(String homeCountry, int currentTime) { 
         int hours = currentTime / 100; // coverts to 2 digit hours
         int minutes = currentTime % 100; // converts to remaining minutes
-        if(hours <0 || hours > 23 || minutes < 0 || minutes >59){
+        if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
             System.out.println("Please enter a valid time");
             return;
         }
+        Country homeCountryObject = null;
+        for (Map.Entry<String, Country> findCountry : allCountries.entrySet()) { // loop over all countries
+            if (findCountry.getKey().equalsIgnoreCase(homeCountry)) { // to match with entered string
+                homeCountryObject = findCountry.getValue();
+            }
+        }
+        if (homeCountryObject == null) { // handling no country found
+            System.out.println("Please enter a valid country");
+            return;
+        }
+
+        Map<String, Country> eligibleCountries = new HashMap<>();
+
+        for (Map.Entry<String, Country> findEligibleCountries : allCountries.entrySet()) {
+            for (String lang : findEligibleCountries.getValue().languages) {
+                for (int timeZoneMath : findEligibleCountries.getValue().timeZones) {
+                    int countryLocalTime = (hours * 60 + minutes) + timeZoneMath;
+                    countryLocalTime = ((countryLocalTime % 1440) + 1440) % 1440;
+                    int countryLocalTime24h = (countryLocalTime / 60) * 100 + (countryLocalTime % 60);
+                    if (homeCountryObject.languages.contains(lang) && countryLocalTime24h >= 900
+                            && countryLocalTime24h <= 1700) {
+                        eligibleCountries.put(findEligibleCountries.getKey(), findEligibleCountries.getValue());
+                        break; // added so a country isn't duplicated from multiple time zones
+                    }
+                }
+            }
+        }
+
+        if (eligibleCountries.isEmpty()) {
+            System.out.println("No eligible countries to take call");
+        } else {
+            for (Map.Entry<String, Country> entry : eligibleCountries.entrySet()) { // need to format this to print
+                                                                                    // current time correctly for that
+                                                                                    // country and time zone
+                System.out.println("Name: " + entry.getValue().name);
+                System.out.println("Languages: " + entry.getValue().languages);
+                System.out.println("Timezones: " + entry.getValue().timeZones);
+                System.out.println("-------------------------------------------------------------");
+            }
+        }
+
     }
 
 }
