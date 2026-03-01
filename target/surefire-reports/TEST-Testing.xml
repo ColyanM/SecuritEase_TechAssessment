@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Testing" time="10.928" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Testing" time="16.745" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\colya\AppData\Local\Temp\surefire18444411878484945867\surefirebooter-20260302014211553_3.jar C:\Users\colya\AppData\Local\Temp\surefire18444411878484945867 2026-03-02T01-42-11_352-jvmRun1 surefire-20260302014211553_1tmp surefire_0-20260302014211553_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\colya\AppData\Local\Temp\surefire13141197649711602128\surefirebooter-20260302083343726_3.jar C:\Users\colya\AppData\Local\Temp\surefire13141197649711602128 2026-03-02T08-33-43_434-jvmRun1 surefire-20260302083343726_1tmp surefire_0-20260302083343726_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment\target\test-classes;C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment\target\classes;C:\Users\colya\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.0\jackson-databind-2.16.0.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.0\jackson-annotations-2.16.0.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.0\jackson-core-2.16.0.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\colya\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\colya\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\colya\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\colya\AppData\Local\Temp\surefire18444411878484945867\surefirebooter-20260302014211553_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\colya\AppData\Local\Temp\surefire13141197649711602128\surefirebooter-20260302083343726_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.17+10"/>
@@ -58,7 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="midnight" classname="Testing" time="2.128">
+  <testcase name="midnight" classname="Testing" time="3.535">
     <system-out><![CDATA[Name: Tokelau
 Languages: [English, Samoan, Tokelauan]
 Time: 11:00
@@ -165,11 +165,11 @@ Time: 10:00
 -------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="saslOfficial" classname="Testing" time="0.635">
+  <testcase name="saslOfficial" classname="Testing" time="1.749">
     <system-out><![CDATA[South African Sign Language is not an official language at this moment
 ]]></system-out>
   </testcase>
-  <testcase name="five" classname="Testing" time="1.569">
+  <testcase name="five" classname="Testing" time="2.157">
     <system-out><![CDATA[Name: State of Qatar
 Languages: [Arabic]
 Time: 17:00
@@ -264,7 +264,7 @@ Time: 16:00
 -------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="nine" classname="Testing" time="1.227">
+  <testcase name="nine" classname="Testing" time="1.553">
     <system-out><![CDATA[Name: State of Qatar
 Languages: [Arabic]
 Time: 09:00
@@ -323,7 +323,7 @@ Time: 09:00
 -------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="ownCountry" classname="Testing" time="1.192">
+  <testcase name="ownCountry" classname="Testing" time="2.052">
     <system-out><![CDATA[Name: People's Democratic Republic of Algeria
 Languages: [Arabic]
 Time: 10:00
@@ -426,10 +426,10 @@ Time: 11:00
 -------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="fieldCheck" classname="Testing" time="1.545"/>
-  <testcase name="antarctica" classname="Testing" time="1.15">
+  <testcase name="fieldCheck" classname="Testing" time="2.962"/>
+  <testcase name="antarctica" classname="Testing" time="1.186">
     <system-out><![CDATA[No eligible countries to take call
 ]]></system-out>
   </testcase>
-  <testcase name="countryTotal" classname="Testing" time="1.422"/>
+  <testcase name="countryTotal" classname="Testing" time="1.46"/>
 </testsuite>
