@@ -67,7 +67,14 @@ public class App {
                     } else {
                         String[] splitter = rawTimeZone.replace("UTC", "").split(":");
                         int timeZoneHours = Integer.parseInt(splitter[0]);
-                        timeZones.add(timeZoneHours);
+                        int timeZoneMinutes = Integer.parseInt(splitter[1]);
+                        int totalMinutes = 0;
+                        if (timeZoneHours < 0) {
+                            totalMinutes = (timeZoneHours * 60) - timeZoneMinutes; //-UTC handling
+                        } else {
+                            totalMinutes = (timeZoneHours * 60) + timeZoneMinutes;
+                        }
+                        timeZones.add(totalMinutes);
                     }
                 }
 
@@ -80,9 +87,14 @@ public class App {
 
     }
 
-    public static void findCenter(Country homeCountry, int currentTime){ //will assume normal business hours are 8 AM to 5 PM
-        int hours = currentTime/100; //coverts to 2 digit hours
-        int minutes = currentTime%100; //converts to remaining minutes
+    public static void findCenter(Country homeCountry, int currentTime) { // will assume normal business hours are 8 AM
+                                                                          // to 5 PM
+        int hours = currentTime / 100; // coverts to 2 digit hours
+        int minutes = currentTime % 100; // converts to remaining minutes
+        if(hours <0 || hours > 23 || minutes < 0 || minutes >59){
+            System.out.println("Please enter a valid time");
+            return;
+        }
     }
 
 }
