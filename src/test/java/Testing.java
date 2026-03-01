@@ -33,19 +33,13 @@ public class Testing {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
         try {
-            HttpResponse<String> response = client.send(request, BodyHandlers.ofString()); // store the response
-            String body = response.body(); // take the raw JSON into a string
+            HttpResponse<String> response = client.send(request, BodyHandlers.ofString()); 
+            String body = response.body(); 
 
-            JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray(); // parse into array
+            JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray(); 
+            //take the official name for each country and add to hashset
             for (JsonElement element : jsonArray) {
-                String name = element.getAsJsonObject().getAsJsonObject("name").get("official").getAsString(); // take
-                                                                                                                     // the
-                                                                                                                     // official
-                                                                                                                     // name
-                                                                                                                     // and
-                                                                                                                     // add
-                                                                                                                     // to
-                                                                                                                     // hashset
+                String name = element.getAsJsonObject().getAsJsonObject("name").get("official").getAsString(); 
                 countries.add(name);
             }
         } catch (IOException | InterruptedException e) {
@@ -67,8 +61,8 @@ public class Testing {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
 
         try {
-            HttpResponse<String> response = client.send(request, BodyHandlers.ofString()); // store the response
-            String body = response.body(); // take the raw JSON into a string
+            HttpResponse<String> response = client.send(request, BodyHandlers.ofString()); 
+            String body = response.body(); 
 
             JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray();
             // uses 0 to get the only element and then access languages
@@ -82,12 +76,12 @@ public class Testing {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-        if (languages.contains("sasl")) { // changes to lower case to match API
+        if (languages.contains("sasl")) { // lower case to match API
             System.out.println("South African Sign Language is an official language");
         } else {
             System.out.println("South African Sign Language is not an official language at this moment");
         }
-        assertFalse(languages.contains("sasl"), "SASL Found"); // this should fail
+        assertFalse(languages.contains("sasl"), "SASL Found"); // this should fail since it is not updated in the API
     }
 
     @Test
@@ -108,7 +102,7 @@ public class Testing {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-        assertEquals(200, underResponse.statusCode()); // test for passing at 10
+        assertEquals(200, underResponse.statusCode()); // test for passing at 10 fields
         assertEquals(400, overResponse.statusCode()); // test for giving 400 code once 11 fields are entered
     }
 

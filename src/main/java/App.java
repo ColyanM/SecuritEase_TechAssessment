@@ -35,37 +35,21 @@ public class App {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
 
         try {
-            HttpResponse<String> response = client.send(request, BodyHandlers.ofString()); // JSON response storage
-            String body = response.body(); // JSON into string format
+            HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+            String body = response.body();
 
-            JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray(); // parse into array
-            for (JsonElement element : jsonArray) { // using this loop to construct country objects and add to master
-                                                    // hashmap
-                String countryName = element.getAsJsonObject().getAsJsonObject("name").get("official").getAsString(); // pulls
-                                                                                                                      // country
-                                                                                                                      // name
-                                                                                                                      // out
+            JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray();
+            for (JsonElement element : jsonArray) { // loop to construct country objects and add to master hashmap
+                String countryName = element.getAsJsonObject().getAsJsonObject("name").get("official").getAsString();
 
                 Set<String> languages = new HashSet<>();
-                JsonObject languagesObject = element.getAsJsonObject().get("languages").getAsJsonObject(); // takes each
-                                                                                                           // countries
-                                                                                                           // languages
-                                                                                                           // and adds
-                                                                                                           // to hashset
-                                                                                                           // for
-                                                                                                           // uniqueness
+                JsonObject languagesObject = element.getAsJsonObject().get("languages").getAsJsonObject();
                 for (Map.Entry<String, JsonElement> entry : languagesObject.entrySet()) {
                     languages.add(entry.getValue().getAsString());
                 }
 
                 Set<Integer> timeZones = new HashSet<>();
-                JsonArray timeZonesList = element.getAsJsonObject().get("timezones").getAsJsonArray(); // same approach
-                                                                                                       // with time
-                                                                                                       // zones as
-                                                                                                       // languages but
-                                                                                                       // need to remove
-                                                                                                       // UTC and spaces
-                                                                                                       // for int format
+                JsonArray timeZonesList = element.getAsJsonObject().get("timezones").getAsJsonArray();
 
                 for (JsonElement timeZone : timeZonesList) {
                     String rawTimeZone = timeZone.getAsString();
@@ -115,10 +99,11 @@ public class App {
         }
 
         int homeCountryMins = homeCountryObject.timeZones.iterator().next(); // will assume the first time zone for the
-                                                                             // country
+                                                                             // country. This is random for a hash and
+                                                                             // will be what the API returns first
         int utc = (hours * 60 + minutes) - homeCountryMins; // calculates the current UTC time
 
-        Map<String, Country> eligibleCountries = new HashMap<>(); // holds countries that match requirements later
+        Map<String, Country> eligibleCountries = new HashMap<>(); // holds countries that match requirements
         Map<String, Integer> localTimes = new HashMap<>(); // going to use to print and test the local time
 
         for (Map.Entry<String, Country> findEligibleCountries : allCountries.entrySet()) { // go over each country
@@ -142,13 +127,13 @@ public class App {
         if (eligibleCountries.isEmpty()) {
             System.out.println("No eligible countries to take call");
         } else {
-            for (Map.Entry<String, Country> entry : eligibleCountries.entrySet()) { // need to format this to print
-                                                                                    // current time correctly for that
-                                                                                    // country and time zone
+            for (Map.Entry<String, Country> entry : eligibleCountries.entrySet()) { 
                 int localTime = localTimes.get(entry.getKey());
                 System.out.println("Name: " + entry.getValue().name);
                 System.out.println("Languages: " + entry.getValue().languages);
-                System.out.println("Time: " + localTime);
+                int hh = localTime / 100;
+                int mm = localTime % 100;
+                System.out.printf("Time: %02d:%02d%n", hh, mm);
                 System.out.println("-------------------------------------------------------------");
             }
         }

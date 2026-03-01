@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Testing" time="13.983" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Testing" time="10.928" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\colya\AppData\Local\Temp\surefire16675831603569232759\surefirebooter-20260302012755543_3.jar C:\Users\colya\AppData\Local\Temp\surefire16675831603569232759 2026-03-02T01-27-55_306-jvmRun1 surefire-20260302012755543_1tmp surefire_0-20260302012755543_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\colya\AppData\Local\Temp\surefire18444411878484945867\surefirebooter-20260302014211553_3.jar C:\Users\colya\AppData\Local\Temp\surefire18444411878484945867 2026-03-02T01-42-11_352-jvmRun1 surefire-20260302014211553_1tmp surefire_0-20260302014211553_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment\target\test-classes;C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment\target\classes;C:\Users\colya\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.0\jackson-databind-2.16.0.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.0\jackson-annotations-2.16.0.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.0\jackson-core-2.16.0.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\colya\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\colya\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\colya\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\colya\AppData\Local\Temp\surefire16675831603569232759\surefirebooter-20260302012755543_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\colya\AppData\Local\Temp\surefire18444411878484945867\surefirebooter-20260302014211553_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.17+10"/>
@@ -58,378 +58,378 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="midnight" classname="Testing" time="2.704">
+  <testcase name="midnight" classname="Testing" time="2.128">
     <system-out><![CDATA[Name: Tokelau
 Languages: [English, Samoan, Tokelauan]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: Commonwealth of Australia
 Languages: [English]
-Time: 930
+Time: 09:30
 -------------------------------------------------------------
 Name: United States of America
 Languages: [English]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Federated States of Micronesia
 Languages: [English]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: American Samoa
 Languages: [English, Samoan]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: United Kingdom of Great Britain and Northern Ireland
 Languages: [English]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Republic of the Marshall Islands
 Languages: [English, Marshallese]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Independent and Sovereign Republic of Kiribati
 Languages: [English, Gilbertese]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Niue
 Languages: [Niuean, English]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: Solomon Islands
 Languages: [English]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Cayman Islands
 Languages: [English]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Republic of Fiji
 Languages: [Fiji Hindi, English, Fijian]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Territory of Norfolk Island
 Languages: [Norfuk, English]
-Time: 930
+Time: 09:30
 -------------------------------------------------------------
 Name: Commonwealth of the Bahamas
 Languages: [English]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Cook Islands
 Languages: [English, Cook Islands Māori]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Belize
 Languages: [English, Belizean Creole, Spanish]
-Time: 1600
+Time: 16:00
 -------------------------------------------------------------
 Name: Tuvalu
 Languages: [English, Tuvaluan]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: New Zealand
 Languages: [English, Māori, New Zealand Sign Language]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Canada
 Languages: [English, French]
-Time: 1500
+Time: 15:00
 -------------------------------------------------------------
 Name: Republic of Vanuatu
 Languages: [English, French, Bislama]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: United States Minor Outlying Islands
 Languages: [English]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Kingdom of Tonga
 Languages: [English, Tongan]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: Jamaica
 Languages: [English, Jamaican Patois]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Pitcairn Group of Islands
 Languages: [English]
-Time: 1400
+Time: 14:00
 -------------------------------------------------------------
 Name: Independent State of Samoa
 Languages: [English, Samoan]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: Republic of Nauru
 Languages: [English, Nauru]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="saslOfficial" classname="Testing" time="1.522">
+  <testcase name="saslOfficial" classname="Testing" time="0.635">
     <system-out><![CDATA[South African Sign Language is not an official language at this moment
 ]]></system-out>
   </testcase>
-  <testcase name="five" classname="Testing" time="1.958">
+  <testcase name="five" classname="Testing" time="1.569">
     <system-out><![CDATA[Name: State of Qatar
 Languages: [Arabic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: People's Democratic Republic of Algeria
 Languages: [Arabic]
-Time: 1500
+Time: 15:00
 -------------------------------------------------------------
 Name: Syrian Arab Republic
 Languages: [Arabic]
-Time: 1600
+Time: 16:00
 -------------------------------------------------------------
 Name: State of Kuwait
 Languages: [Arabic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Lebanese Republic
 Languages: [Arabic, French]
-Time: 1600
+Time: 16:00
 -------------------------------------------------------------
 Name: Republic of Iraq
 Languages: [Arabic, Sorani, Aramaic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Tunisian Republic
 Languages: [Arabic]
-Time: 1500
+Time: 15:00
 -------------------------------------------------------------
 Name: State of Libya
 Languages: [Arabic]
-Time: 1500
+Time: 15:00
 -------------------------------------------------------------
 Name: Kingdom of Morocco
 Languages: [Arabic, Berber]
-Time: 1400
+Time: 14:00
 -------------------------------------------------------------
 Name: State of Israel
 Languages: [Arabic, Hebrew]
-Time: 1600
+Time: 16:00
 -------------------------------------------------------------
 Name: Islamic Republic of Mauritania
 Languages: [Arabic]
-Time: 1400
+Time: 14:00
 -------------------------------------------------------------
 Name: Arab Republic of Egypt
 Languages: [Arabic]
-Time: 1600
+Time: 16:00
 -------------------------------------------------------------
 Name: Kingdom of Saudi Arabia
 Languages: [Arabic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Kingdom of Bahrain
 Languages: [Arabic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Federal Republic of Somalia
 Languages: [Arabic, Somali]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Republic of Djibouti
 Languages: [Arabic, French]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Republic of the Sudan
 Languages: [English, Arabic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Union of the Comoros
 Languages: [Arabic, French, Comorian]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Hashemite Kingdom of Jordan
 Languages: [Arabic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Republic of Yemen
 Languages: [Arabic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: Republic of Chad
 Languages: [Arabic, French]
-Time: 1500
+Time: 15:00
 -------------------------------------------------------------
 Name: State of Eritrea
 Languages: [English, Tigrinya, Arabic]
-Time: 1700
+Time: 17:00
 -------------------------------------------------------------
 Name: State of Palestine
 Languages: [Arabic]
-Time: 1600
+Time: 16:00
 -------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="nine" classname="Testing" time="2.247">
+  <testcase name="nine" classname="Testing" time="1.227">
     <system-out><![CDATA[Name: State of Qatar
 Languages: [Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: State of Kuwait
 Languages: [Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Sultanate of Oman
 Languages: [Arabic]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Republic of Iraq
 Languages: [Arabic, Sorani, Aramaic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: United Arab Emirates
 Languages: [Arabic]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Kingdom of Saudi Arabia
 Languages: [Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Kingdom of Bahrain
 Languages: [Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Federal Republic of Somalia
 Languages: [Arabic, Somali]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Republic of Djibouti
 Languages: [Arabic, French]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Republic of the Sudan
 Languages: [English, Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Union of the Comoros
 Languages: [Arabic, French, Comorian]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Hashemite Kingdom of Jordan
 Languages: [Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Republic of Yemen
 Languages: [Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: State of Eritrea
 Languages: [English, Tigrinya, Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="ownCountry" classname="Testing" time="1.097">
+  <testcase name="ownCountry" classname="Testing" time="1.192">
     <system-out><![CDATA[Name: People's Democratic Republic of Algeria
 Languages: [Arabic]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: State of Kuwait
 Languages: [Arabic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Lebanese Republic
 Languages: [Arabic, French]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: Sultanate of Oman
 Languages: [Arabic]
-Time: 1300
+Time: 13:00
 -------------------------------------------------------------
 Name: Republic of Iraq
 Languages: [Arabic, Sorani, Aramaic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Tunisian Republic
 Languages: [Arabic]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: Kingdom of Morocco
 Languages: [Arabic, Berber]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Arab Republic of Egypt
 Languages: [Arabic]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: Kingdom of Saudi Arabia
 Languages: [Arabic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Kingdom of Bahrain
 Languages: [Arabic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Union of the Comoros
 Languages: [Arabic, French, Comorian]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Republic of Chad
 Languages: [Arabic, French]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: State of Qatar
 Languages: [Arabic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Syrian Arab Republic
 Languages: [Arabic]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: State of Libya
 Languages: [Arabic]
-Time: 1000
+Time: 10:00
 -------------------------------------------------------------
 Name: United Arab Emirates
 Languages: [Arabic]
-Time: 1300
+Time: 13:00
 -------------------------------------------------------------
 Name: State of Israel
 Languages: [Arabic, Hebrew]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 Name: Islamic Republic of Mauritania
 Languages: [Arabic]
-Time: 900
+Time: 09:00
 -------------------------------------------------------------
 Name: Federal Republic of Somalia
 Languages: [Arabic, Somali]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Republic of Djibouti
 Languages: [Arabic, French]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Republic of the Sudan
 Languages: [English, Arabic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Hashemite Kingdom of Jordan
 Languages: [Arabic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: Republic of Yemen
 Languages: [Arabic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: State of Eritrea
 Languages: [English, Tigrinya, Arabic]
-Time: 1200
+Time: 12:00
 -------------------------------------------------------------
 Name: State of Palestine
 Languages: [Arabic]
-Time: 1100
+Time: 11:00
 -------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="fieldCheck" classname="Testing" time="2.192"/>
-  <testcase name="antarctica" classname="Testing" time="1.143">
+  <testcase name="fieldCheck" classname="Testing" time="1.545"/>
+  <testcase name="antarctica" classname="Testing" time="1.15">
     <system-out><![CDATA[No eligible countries to take call
 ]]></system-out>
   </testcase>
-  <testcase name="countryTotal" classname="Testing" time="1.073"/>
+  <testcase name="countryTotal" classname="Testing" time="1.422"/>
 </testsuite>
