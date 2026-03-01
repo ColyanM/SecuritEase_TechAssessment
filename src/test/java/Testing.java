@@ -54,7 +54,7 @@ public class Testing {
                 countries.add(commonName);
             }
         } catch (IOException | InterruptedException e) {
-
+            e.printStackTrace();
         }
 
         assertEquals(250, countries.size()); // I am assuming max countries of 250 and all "statuses" count in my
@@ -85,7 +85,7 @@ public class Testing {
                                                // risk
             }
         } catch (IOException | InterruptedException e) {
-
+            e.printStackTrace();
         }
         if (languages.contains("sasl")) { //changes to lower case to match API 
             System.out.println("South African Sign Language is an official language");
@@ -111,7 +111,7 @@ public class Testing {
             overResponse = client.send(overRequest, BodyHandlers.ofString()); // store the response for 11 fields
             underResponse = client.send(underRequest, BodyHandlers.ofString()); // store the response for 10 fields
         } catch (IOException | InterruptedException e) {
-
+            e.printStackTrace();
         }
         assertEquals( 200, underResponse.statusCode()); // test for passing at 10
         assertEquals( 400, overResponse.statusCode()); // test for giving 400 code once 11 fields are entered

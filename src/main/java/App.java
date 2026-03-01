@@ -13,6 +13,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import java.util.Scanner;
 
 public class App {
 
@@ -20,7 +21,12 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         loader();
-        findCentre("Republic of Ghana", 600);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your country");
+        String country = scanner.nextLine();
+        System.out.println("Enter current time with 24H format");
+        int time = scanner.nextInt();
+        findCentre(country, time);
     }
 
     public static void loader() {
@@ -83,7 +89,7 @@ public class App {
                 allCountries.put(countryName, newCountry);
             }
         } catch (IOException | InterruptedException e) {
-
+            e.printStackTrace();
         }
 
     }
