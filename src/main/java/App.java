@@ -88,7 +88,7 @@ public class App {
 
     }
 
-    public static void findCentre(String homeCountry, int currentTime) { 
+    public static void findCentre(String homeCountry, int currentTime) {
         int hours = currentTime / 100; // coverts to 2 digit hours
         int minutes = currentTime % 100; // converts to remaining minutes
         if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
@@ -106,17 +106,23 @@ public class App {
             return;
         }
 
+        int homeCountryMins = homeCountryObject.timeZones.iterator().next(); // will assume the first time zone for the
+                                                                             // country
+        int utc = (hours * 60 + minutes) - homeCountryMins;
+
         Map<String, Country> eligibleCountries = new HashMap<>();
+        Map<String, Integer> localTimes = new HashMap<>(); //going to use to print and test the local time
 
         for (Map.Entry<String, Country> findEligibleCountries : allCountries.entrySet()) {
             for (String lang : findEligibleCountries.getValue().languages) {
                 for (int timeZoneMath : findEligibleCountries.getValue().timeZones) {
-                    int countryLocalTime = (hours * 60 + minutes) + timeZoneMath;
-                    countryLocalTime = ((countryLocalTime % 1440) + 1440) % 1440;
+                    int countryLocalTime = utc + timeZoneMath;
+                    countryLocalTime = ((countryLocalTime % 1440) + 1440) % 1440; // if next day is needed
                     int countryLocalTime24h = (countryLocalTime / 60) * 100 + (countryLocalTime % 60);
                     if (homeCountryObject.languages.contains(lang) && countryLocalTime24h >= 900
                             && countryLocalTime24h <= 1700) {
                         eligibleCountries.put(findEligibleCountries.getKey(), findEligibleCountries.getValue());
+                        localTimes.put(findEligibleCountries.getKey(), countryLocalTime24h);
                         break; // added so a country isn't duplicated from multiple time zones
                     }
                 }
@@ -129,9 +135,10 @@ public class App {
             for (Map.Entry<String, Country> entry : eligibleCountries.entrySet()) { // need to format this to print
                                                                                     // current time correctly for that
                                                                                     // country and time zone
+                int localTime = localTimes.get(entry.getKey());
                 System.out.println("Name: " + entry.getValue().name);
                 System.out.println("Languages: " + entry.getValue().languages);
-                System.out.println("Timezones: " + entry.getValue().timeZones);
+                System.out.println("Time: " + localTime);
                 System.out.println("-------------------------------------------------------------");
             }
         }
