@@ -72,12 +72,13 @@ public class App {
                     if (rawTimeZone.equals("UTC")) { // handles no number for UTC
                         timeZones.add(0);
                     } else {
-                        String[] splitter = rawTimeZone.replace("UTC", "").split(":");
+                        String[] splitter = rawTimeZone.replace("UTC", "").split(":"); // splits the numbers into hours
+                                                                                       // and min
                         int timeZoneHours = Integer.parseInt(splitter[0]);
                         int timeZoneMinutes = Integer.parseInt(splitter[1]);
                         int totalMinutes = 0;
                         if (timeZoneHours < 0) {
-                            totalMinutes = (timeZoneHours * 60) - timeZoneMinutes; // -UTC handling
+                            totalMinutes = (timeZoneHours * 60) - timeZoneMinutes; // Negative UTC handling
                         } else {
                             totalMinutes = (timeZoneHours * 60) + timeZoneMinutes;
                         }
@@ -93,11 +94,12 @@ public class App {
         }
 
     }
-    //change to return a map so I can write tests
+
+    // change to return a map so I can write tests
     public static Map<String, Country> findCentre(String homeCountry, int currentTime) {
         int hours = currentTime / 100; // coverts to 2 digit hours
         int minutes = currentTime % 100; // converts to remaining minutes
-        if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+        if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) { // checks the time is valid 24H time
             System.out.println("Please enter a valid time");
             return new HashMap<>();
         }
@@ -114,18 +116,20 @@ public class App {
 
         int homeCountryMins = homeCountryObject.timeZones.iterator().next(); // will assume the first time zone for the
                                                                              // country
-        int utc = (hours * 60 + minutes) - homeCountryMins;
+        int utc = (hours * 60 + minutes) - homeCountryMins; // calculates the current UTC time
 
-        Map<String, Country> eligibleCountries = new HashMap<>();
-        Map<String, Integer> localTimes = new HashMap<>(); //going to use to print and test the local time
+        Map<String, Country> eligibleCountries = new HashMap<>(); // holds countries that match requirements later
+        Map<String, Integer> localTimes = new HashMap<>(); // going to use to print and test the local time
 
-        for (Map.Entry<String, Country> findEligibleCountries : allCountries.entrySet()) {
-            for (String lang : findEligibleCountries.getValue().languages) {
-                for (int timeZoneMath : findEligibleCountries.getValue().timeZones) {
-                    int countryLocalTime = utc + timeZoneMath;
+        for (Map.Entry<String, Country> findEligibleCountries : allCountries.entrySet()) { // go over each country
+            for (String lang : findEligibleCountries.getValue().languages) { // loop each countries languages
+                for (int timeZoneMath : findEligibleCountries.getValue().timeZones) { // and their time zones
+                    int countryLocalTime = utc + timeZoneMath; // find their local time for business hours checking
                     countryLocalTime = ((countryLocalTime % 1440) + 1440) % 1440; // if next day is needed
-                    int countryLocalTime24h = (countryLocalTime / 60) * 100 + (countryLocalTime % 60);
-                    if (homeCountryObject.languages.contains(lang) && countryLocalTime24h >= 900
+                    int countryLocalTime24h = (countryLocalTime / 60) * 100 + (countryLocalTime % 60); // convert time
+                                                                                                       // to 24H
+                    if (homeCountryObject.languages.contains(lang) && countryLocalTime24h >= 900 // match the language
+                                                                                                 // and time zone
                             && countryLocalTime24h <= 1700) {
                         eligibleCountries.put(findEligibleCountries.getKey(), findEligibleCountries.getValue());
                         localTimes.put(findEligibleCountries.getKey(), countryLocalTime24h);

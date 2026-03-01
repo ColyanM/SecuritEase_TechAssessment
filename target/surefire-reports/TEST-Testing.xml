@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Testing" time="13.983" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment\target\test-classes;C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment\target\classes;C:\Users\colya\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.0\jackson-databind-2.16.0.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.0\jackson-annotations-2.16.0.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.0\jackson-core-2.16.0.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\colya\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\colya\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\colya\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Pacific/Auckland"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\colya\AppData\Local\Temp\surefire16675831603569232759\surefirebooter-20260302012755543_3.jar C:\Users\colya\AppData\Local\Temp\surefire16675831603569232759 2026-03-02T01-27-55_306-jvmRun1 surefire-20260302012755543_1tmp surefire_0-20260302012755543_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment\target\test-classes;C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment\target\classes;C:\Users\colya\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.0\jackson-databind-2.16.0.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.0\jackson-annotations-2.16.0.jar;C:\Users\colya\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.0\jackson-core-2.16.0.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\colya\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\colya\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\colya\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\colya\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\colya"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\colya\AppData\Local\Temp\surefire16675831603569232759\surefirebooter-20260302012755543_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.17+10"/>
+    <property name="user.name" value="colya"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.17+10"/>
+    <property name="localRepository" value="C:\Users\colya\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\colya\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.17"/>
+    <property name="user.dir" value="C:\Users\colya\source\repos\ColyanMiller_SecuritEase_TechAssessment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\colya\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\colya\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\colya\AppData\Local\Microsoft\WindowsApps;C:\Users\colya\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\colya\AppData\Roaming\npm;C:\Users\colya\.dotnet\tools;C:\Users\colya\AppData\Local\Python\bin;C:\Tools\apache-maven-3.9.12\bin;C:\Users\colya\AppData\Local\GitHubDesktop\bin;C:\Users\colya\AppData\Local\Programs\Ollama;c:\Users\colya\.vscode\extensions\vscjava.vscode-java-debug-0.58.5\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.17+10"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="midnight" classname="Testing" time="2.704">
+    <system-out><![CDATA[Name: Tokelau
+Languages: [English, Samoan, Tokelauan]
+Time: 1100
+-------------------------------------------------------------
+Name: Commonwealth of Australia
+Languages: [English]
+Time: 930
+-------------------------------------------------------------
+Name: United States of America
+Languages: [English]
+Time: 1000
+-------------------------------------------------------------
+Name: Federated States of Micronesia
+Languages: [English]
+Time: 900
+-------------------------------------------------------------
+Name: American Samoa
+Languages: [English, Samoan]
+Time: 1100
+-------------------------------------------------------------
+Name: United Kingdom of Great Britain and Northern Ireland
+Languages: [English]
+Time: 1700
+-------------------------------------------------------------
+Name: Republic of the Marshall Islands
+Languages: [English, Marshallese]
+Time: 1000
+-------------------------------------------------------------
+Name: Independent and Sovereign Republic of Kiribati
+Languages: [English, Gilbertese]
+Time: 1000
+-------------------------------------------------------------
+Name: Niue
+Languages: [Niuean, English]
+Time: 1100
+-------------------------------------------------------------
+Name: Solomon Islands
+Languages: [English]
+Time: 900
+-------------------------------------------------------------
+Name: Cayman Islands
+Languages: [English]
+Time: 1700
+-------------------------------------------------------------
+Name: Republic of Fiji
+Languages: [Fiji Hindi, English, Fijian]
+Time: 1000
+-------------------------------------------------------------
+Name: Territory of Norfolk Island
+Languages: [Norfuk, English]
+Time: 930
+-------------------------------------------------------------
+Name: Commonwealth of the Bahamas
+Languages: [English]
+Time: 1700
+-------------------------------------------------------------
+Name: Cook Islands
+Languages: [English, Cook Islands Māori]
+Time: 1200
+-------------------------------------------------------------
+Name: Belize
+Languages: [English, Belizean Creole, Spanish]
+Time: 1600
+-------------------------------------------------------------
+Name: Tuvalu
+Languages: [English, Tuvaluan]
+Time: 1000
+-------------------------------------------------------------
+Name: New Zealand
+Languages: [English, Māori, New Zealand Sign Language]
+Time: 1000
+-------------------------------------------------------------
+Name: Canada
+Languages: [English, French]
+Time: 1500
+-------------------------------------------------------------
+Name: Republic of Vanuatu
+Languages: [English, French, Bislama]
+Time: 900
+-------------------------------------------------------------
+Name: United States Minor Outlying Islands
+Languages: [English]
+Time: 1000
+-------------------------------------------------------------
+Name: Kingdom of Tonga
+Languages: [English, Tongan]
+Time: 1100
+-------------------------------------------------------------
+Name: Jamaica
+Languages: [English, Jamaican Patois]
+Time: 1700
+-------------------------------------------------------------
+Name: Pitcairn Group of Islands
+Languages: [English]
+Time: 1400
+-------------------------------------------------------------
+Name: Independent State of Samoa
+Languages: [English, Samoan]
+Time: 1100
+-------------------------------------------------------------
+Name: Republic of Nauru
+Languages: [English, Nauru]
+Time: 1000
+-------------------------------------------------------------
+]]></system-out>
+  </testcase>
+  <testcase name="saslOfficial" classname="Testing" time="1.522">
+    <system-out><![CDATA[South African Sign Language is not an official language at this moment
+]]></system-out>
+  </testcase>
+  <testcase name="five" classname="Testing" time="1.958">
+    <system-out><![CDATA[Name: State of Qatar
+Languages: [Arabic]
+Time: 1700
+-------------------------------------------------------------
+Name: People's Democratic Republic of Algeria
+Languages: [Arabic]
+Time: 1500
+-------------------------------------------------------------
+Name: Syrian Arab Republic
+Languages: [Arabic]
+Time: 1600
+-------------------------------------------------------------
+Name: State of Kuwait
+Languages: [Arabic]
+Time: 1700
+-------------------------------------------------------------
+Name: Lebanese Republic
+Languages: [Arabic, French]
+Time: 1600
+-------------------------------------------------------------
+Name: Republic of Iraq
+Languages: [Arabic, Sorani, Aramaic]
+Time: 1700
+-------------------------------------------------------------
+Name: Tunisian Republic
+Languages: [Arabic]
+Time: 1500
+-------------------------------------------------------------
+Name: State of Libya
+Languages: [Arabic]
+Time: 1500
+-------------------------------------------------------------
+Name: Kingdom of Morocco
+Languages: [Arabic, Berber]
+Time: 1400
+-------------------------------------------------------------
+Name: State of Israel
+Languages: [Arabic, Hebrew]
+Time: 1600
+-------------------------------------------------------------
+Name: Islamic Republic of Mauritania
+Languages: [Arabic]
+Time: 1400
+-------------------------------------------------------------
+Name: Arab Republic of Egypt
+Languages: [Arabic]
+Time: 1600
+-------------------------------------------------------------
+Name: Kingdom of Saudi Arabia
+Languages: [Arabic]
+Time: 1700
+-------------------------------------------------------------
+Name: Kingdom of Bahrain
+Languages: [Arabic]
+Time: 1700
+-------------------------------------------------------------
+Name: Federal Republic of Somalia
+Languages: [Arabic, Somali]
+Time: 1700
+-------------------------------------------------------------
+Name: Republic of Djibouti
+Languages: [Arabic, French]
+Time: 1700
+-------------------------------------------------------------
+Name: Republic of the Sudan
+Languages: [English, Arabic]
+Time: 1700
+-------------------------------------------------------------
+Name: Union of the Comoros
+Languages: [Arabic, French, Comorian]
+Time: 1700
+-------------------------------------------------------------
+Name: Hashemite Kingdom of Jordan
+Languages: [Arabic]
+Time: 1700
+-------------------------------------------------------------
+Name: Republic of Yemen
+Languages: [Arabic]
+Time: 1700
+-------------------------------------------------------------
+Name: Republic of Chad
+Languages: [Arabic, French]
+Time: 1500
+-------------------------------------------------------------
+Name: State of Eritrea
+Languages: [English, Tigrinya, Arabic]
+Time: 1700
+-------------------------------------------------------------
+Name: State of Palestine
+Languages: [Arabic]
+Time: 1600
+-------------------------------------------------------------
+]]></system-out>
+  </testcase>
+  <testcase name="nine" classname="Testing" time="2.247">
+    <system-out><![CDATA[Name: State of Qatar
+Languages: [Arabic]
+Time: 900
+-------------------------------------------------------------
+Name: State of Kuwait
+Languages: [Arabic]
+Time: 900
+-------------------------------------------------------------
+Name: Sultanate of Oman
+Languages: [Arabic]
+Time: 1000
+-------------------------------------------------------------
+Name: Republic of Iraq
+Languages: [Arabic, Sorani, Aramaic]
+Time: 900
+-------------------------------------------------------------
+Name: United Arab Emirates
+Languages: [Arabic]
+Time: 1000
+-------------------------------------------------------------
+Name: Kingdom of Saudi Arabia
+Languages: [Arabic]
+Time: 900
+-------------------------------------------------------------
+Name: Kingdom of Bahrain
+Languages: [Arabic]
+Time: 900
+-------------------------------------------------------------
+Name: Federal Republic of Somalia
+Languages: [Arabic, Somali]
+Time: 900
+-------------------------------------------------------------
+Name: Republic of Djibouti
+Languages: [Arabic, French]
+Time: 900
+-------------------------------------------------------------
+Name: Republic of the Sudan
+Languages: [English, Arabic]
+Time: 900
+-------------------------------------------------------------
+Name: Union of the Comoros
+Languages: [Arabic, French, Comorian]
+Time: 900
+-------------------------------------------------------------
+Name: Hashemite Kingdom of Jordan
+Languages: [Arabic]
+Time: 900
+-------------------------------------------------------------
+Name: Republic of Yemen
+Languages: [Arabic]
+Time: 900
+-------------------------------------------------------------
+Name: State of Eritrea
+Languages: [English, Tigrinya, Arabic]
+Time: 900
+-------------------------------------------------------------
+]]></system-out>
+  </testcase>
+  <testcase name="ownCountry" classname="Testing" time="1.097">
+    <system-out><![CDATA[Name: People's Democratic Republic of Algeria
+Languages: [Arabic]
+Time: 1000
+-------------------------------------------------------------
+Name: State of Kuwait
+Languages: [Arabic]
+Time: 1200
+-------------------------------------------------------------
+Name: Lebanese Republic
+Languages: [Arabic, French]
+Time: 1100
+-------------------------------------------------------------
+Name: Sultanate of Oman
+Languages: [Arabic]
+Time: 1300
+-------------------------------------------------------------
+Name: Republic of Iraq
+Languages: [Arabic, Sorani, Aramaic]
+Time: 1200
+-------------------------------------------------------------
+Name: Tunisian Republic
+Languages: [Arabic]
+Time: 1000
+-------------------------------------------------------------
+Name: Kingdom of Morocco
+Languages: [Arabic, Berber]
+Time: 900
+-------------------------------------------------------------
+Name: Arab Republic of Egypt
+Languages: [Arabic]
+Time: 1100
+-------------------------------------------------------------
+Name: Kingdom of Saudi Arabia
+Languages: [Arabic]
+Time: 1200
+-------------------------------------------------------------
+Name: Kingdom of Bahrain
+Languages: [Arabic]
+Time: 1200
+-------------------------------------------------------------
+Name: Union of the Comoros
+Languages: [Arabic, French, Comorian]
+Time: 1200
+-------------------------------------------------------------
+Name: Republic of Chad
+Languages: [Arabic, French]
+Time: 1000
+-------------------------------------------------------------
+Name: State of Qatar
+Languages: [Arabic]
+Time: 1200
+-------------------------------------------------------------
+Name: Syrian Arab Republic
+Languages: [Arabic]
+Time: 1100
+-------------------------------------------------------------
+Name: State of Libya
+Languages: [Arabic]
+Time: 1000
+-------------------------------------------------------------
+Name: United Arab Emirates
+Languages: [Arabic]
+Time: 1300
+-------------------------------------------------------------
+Name: State of Israel
+Languages: [Arabic, Hebrew]
+Time: 1100
+-------------------------------------------------------------
+Name: Islamic Republic of Mauritania
+Languages: [Arabic]
+Time: 900
+-------------------------------------------------------------
+Name: Federal Republic of Somalia
+Languages: [Arabic, Somali]
+Time: 1200
+-------------------------------------------------------------
+Name: Republic of Djibouti
+Languages: [Arabic, French]
+Time: 1200
+-------------------------------------------------------------
+Name: Republic of the Sudan
+Languages: [English, Arabic]
+Time: 1200
+-------------------------------------------------------------
+Name: Hashemite Kingdom of Jordan
+Languages: [Arabic]
+Time: 1200
+-------------------------------------------------------------
+Name: Republic of Yemen
+Languages: [Arabic]
+Time: 1200
+-------------------------------------------------------------
+Name: State of Eritrea
+Languages: [English, Tigrinya, Arabic]
+Time: 1200
+-------------------------------------------------------------
+Name: State of Palestine
+Languages: [Arabic]
+Time: 1100
+-------------------------------------------------------------
+]]></system-out>
+  </testcase>
+  <testcase name="fieldCheck" classname="Testing" time="2.192"/>
+  <testcase name="antarctica" classname="Testing" time="1.143">
+    <system-out><![CDATA[No eligible countries to take call
+]]></system-out>
+  </testcase>
+  <testcase name="countryTotal" classname="Testing" time="1.073"/>
+</testsuite>

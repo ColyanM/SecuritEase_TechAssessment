@@ -38,7 +38,7 @@ public class Testing {
 
             JsonArray jsonArray = JsonParser.parseString(body).getAsJsonArray(); // parse into array
             for (JsonElement element : jsonArray) {
-                String commonName = element.getAsJsonObject().getAsJsonObject("name").get("official").getAsString(); // take
+                String name = element.getAsJsonObject().getAsJsonObject("name").get("official").getAsString(); // take
                                                                                                                      // the
                                                                                                                      // official
                                                                                                                      // name
@@ -46,14 +46,14 @@ public class Testing {
                                                                                                                      // add
                                                                                                                      // to
                                                                                                                      // hashset
-                countries.add(commonName);
+                countries.add(name);
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
 
         assertEquals(250, countries.size()); // I am assuming max countries of 250 and all "statuses" count in my
-                                             // assumptions
+                                             // assumptions. COuld filter this by status as well or have a range that passes
     }
 
     @Test
