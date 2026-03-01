@@ -1,8 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -28,8 +25,6 @@ import java.util.Map;
 public class Testing {
     @Test
     void countryTotal() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        Gson gson = new GsonBuilder().create();
         Set<String> countries = new HashSet<>(); // chose a hashset because it doesn't have duplicates, I also don't
                                                  // have a value to track with it where a hashmap wuld be more useful
         String url = "https://restcountries.com/v3.1/all/?fields=name"; // all by itself does not work because of the 10
@@ -87,12 +82,12 @@ public class Testing {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-        if (languages.contains("sasl")) { //changes to lower case to match API 
+        if (languages.contains("sasl")) { // changes to lower case to match API
             System.out.println("South African Sign Language is an official language");
         } else {
             System.out.println("South African Sign Language is not an official language at this moment");
         }
-        assertTrue(languages.contains("SASL"), "SASL Found"); // this should fail
+        assertFalse(languages.contains("sasl"), "SASL Found"); // this should fail
     }
 
     @Test
@@ -113,7 +108,47 @@ public class Testing {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-        assertEquals( 200, underResponse.statusCode()); // test for passing at 10
-        assertEquals( 400, overResponse.statusCode()); // test for giving 400 code once 11 fields are entered
+        assertEquals(200, underResponse.statusCode()); // test for passing at 10
+        assertEquals(400, overResponse.statusCode()); // test for giving 400 code once 11 fields are entered
+    }
+
+    @Test
+    void antarctica() {
+        // has no languages to match with
+        App.loader();
+        Map<String, Country> results = App.findCentre("Antarctica", 1000);
+        assertTrue(results.isEmpty(), "Antarctica should never have a return");
+    }
+
+    @Test
+    void midnight() {
+        // testing if time zones in he next day are good
+        App.loader();
+        Map<String, Country> results = App.findCentre("Republic of Ghana", 2200);
+        assertTrue(results.containsKey("New Zealand"), "New Zealand will be 10 AM the next day");
+    }
+
+    @Test
+    void nine() {
+        // testing if 9 AM exactly fails
+        App.loader();
+        Map<String, Country> results = App.findCentre("Hashemite Kingdom of Jordan", 900);
+        assertTrue(results.containsKey("Kingdom of Saudi Arabia"), "Saudi Arabia is exactly 900");
+    }
+
+    @Test
+    void five() {
+        //testing if 5 o'clock exactly works as well
+        App.loader();
+        Map<String, Country> results = App.findCentre("Hashemite Kingdom of Jordan", 1700);
+        assertTrue(results.containsKey("Kingdom of Saudi Arabia"),"Saudi Arabia is exactly 1700");
+    }
+
+    @Test
+    void ownCountry() {
+        //testing if 5 o'clock exactly works as well
+        App.loader();
+        Map<String, Country> results = App.findCentre("Hashemite Kingdom of Jordan", 1200);
+        assertTrue(results.containsKey("Hashemite Kingdom of Jordan"),"Own country is within business hours");
     }
 }

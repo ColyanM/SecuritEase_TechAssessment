@@ -93,13 +93,13 @@ public class App {
         }
 
     }
-
-    public static void findCentre(String homeCountry, int currentTime) {
+    //change to return a map so I can write tests
+    public static Map<String, Country> findCentre(String homeCountry, int currentTime) {
         int hours = currentTime / 100; // coverts to 2 digit hours
         int minutes = currentTime % 100; // converts to remaining minutes
         if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
             System.out.println("Please enter a valid time");
-            return;
+            return new HashMap<>();
         }
         Country homeCountryObject = null;
         for (Map.Entry<String, Country> findCountry : allCountries.entrySet()) { // loop over all countries
@@ -109,7 +109,7 @@ public class App {
         }
         if (homeCountryObject == null) { // handling no country found
             System.out.println("Please enter a valid country");
-            return;
+            return new HashMap<>();
         }
 
         int homeCountryMins = homeCountryObject.timeZones.iterator().next(); // will assume the first time zone for the
@@ -148,7 +148,7 @@ public class App {
                 System.out.println("-------------------------------------------------------------");
             }
         }
-
+        return eligibleCountries;
     }
 
 }
