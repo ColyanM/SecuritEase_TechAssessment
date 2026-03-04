@@ -81,7 +81,7 @@ public class Testing {
         } else {
             System.out.println("South African Sign Language is not an official language at this moment");
         }
-        assertFalse(languages.contains("sasl"), "SASL Found"); // this should fail since it is not updated in the API
+        assertTrue(languages.contains("sasl"), "SASL Found"); // this should fail since it is not updated in the API
     }
 
     @Test
